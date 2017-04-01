@@ -1,0 +1,20 @@
+{
+  "name": "guardian-theater-xbox-live-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --optimize_for_size --max_semi_space_size=2 --max_old_space_size=256 --max_executable_size=192 --expose-gc --gc_global --always_compact index.js"
+  },
+  "author": "Chris Fried",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "newrelic": "^1.37.2",
+    "xbox-live-api": "file:./xbox-live-api"
+  },
+  "devDependencies": {
+    "eslint": "^3.18.0"
+  }
+}
