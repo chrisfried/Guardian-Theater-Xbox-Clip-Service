@@ -11,3 +11,5 @@
     ```
 
 5. Run `npm start`.
+
+If your Xbox credentials fail to authenticate, it may be that you need to verify the login attempt: https://account.live.com/Activity
