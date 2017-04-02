@@ -3,16 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrisfried/Guardian-Theater-Xbox-Clip-Service"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --optimize_for_size --max_semi_space_size=2 --max_old_space_size=256 --max_executable_size=192 --expose-gc --gc_global --always_compact index.js"
+    "start": "heroku local"
   },
   "author": "Chris Fried",
   "license": "ISC",
   "dependencies": {
+    "cookie": "^0.3.1",
     "express": "^4.15.2",
-    "newrelic": "^1.37.2",
-    "xbox-live-api": "file:./xbox-live-api"
+    "querystring": "^0.2.0",
+    "request": "^2.81.0"
   },
   "devDependencies": {
     "eslint": "^3.18.0"

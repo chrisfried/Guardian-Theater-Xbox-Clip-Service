@@ -1,7 +1,7 @@
 // require('newrelic');
 
 let app = require('express')(),
-  XboxLiveApi = require('./xbox-live-api'),
+  XboxLiveApi = require('./xbox-live-api.js'),
   request = require('request');
 
 let xboxUser = process.env.XBOXUSER;
