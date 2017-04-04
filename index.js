@@ -22,7 +22,9 @@ app.get('/api/clips/:gamertag', (req, res) => {
 
   xla.getClipsForGamerRequest(gamertag, (clipsRequest) => {
     if (clipsRequest) {
-      request(clipsRequest).pipe(res);
+      request(clipsRequest)
+        .on('error', (e) => res.end('Error retrieving clips for ' + gamertag + '.'))
+        .pipe(res);
     } else {
       res.end('Error retrieving clips for ' + gamertag + '.');
     }
