@@ -1,4 +1,4 @@
-require('newrelic');
+// require('newrelic');
 
 let app = require('express')(),
   XboxLiveApi = require('./xbox-live-api.js'),
