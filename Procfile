@@ -1,1 +1,1 @@
-web: node --max_semi_space_size=2 --max_old_space_size=256 --max_executable_size=192 index.js
+web: node --max_executable_size=192 --max_semi_space_size=2 --max_old_space_size=256 index.js
