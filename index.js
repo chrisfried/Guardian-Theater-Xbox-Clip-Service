@@ -9,7 +9,8 @@ let xboxPass = process.env.XBOXPASS;
 
 let xla = new XboxLiveApi(xboxUser, xboxPass);
 
-app.set('port', (process.env.PORT || 5000));
+app.set('port', (process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 5000));
+app.set('ip', (process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0'));
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
@@ -35,6 +36,5 @@ app.get('/ping', (req, res) => {
   res.end('ping');
 });
 
-app.listen(app.get('port'), () => {
-  console.log('Server listening on port: ', app.get('port'));
-});
+app.listen(app.get('port'), app.get('ip'));
+console.log('Server running on http://%s:%s', app.get('ip'), app.get('port'));
